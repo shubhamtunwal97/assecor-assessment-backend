@@ -80,7 +80,7 @@ Das Ausgabeformat der Daten ist als `application/json` festgelegt. Die Schnittst
 * Implementieren Sie eine zusätzliche Methode POST/ Personen, die eine zusätzliche Aufzeichnung zur Datenquelle hinzufügen
 * Anbindung einer zweiten Datenquelle (z.B. Datenbank via Entity Framework)
 
-Denk an deine zukünfitgen Kollegen, und mach es ihnen ihnen nicht zu einfach, indem du deine Lösung öffentlich zur Schau stellst. Danke!
+Denk an deine zukünftigen Kollegen, und mach es ihnen nicht zu einfach, indem du deine Lösung öffentlich zur Schau stellst. Danke!
 
 # Assecor Assessment Test (EN)
 
