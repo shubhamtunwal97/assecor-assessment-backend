@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.assecor.assessment.controller.PersonControllerTest" time="4.809" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.assecor.assessment.repository.DatabasePersonRepositoryTest" time="15.269" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -65,9 +65,9 @@
     <property name="java.class.version" value="61.0"/>
     <property name="LOGGED_APPLICATION_NAME" value="[assecor-assessment-test] "/>
   </properties>
-  <testcase name="getPersonsByColor_ShouldReturnPersonsWithSpecificColor" classname="com.assecor.assessment.controller.PersonControllerTest" time="0.629">
-    <system-out><![CDATA[2025-09-29T23:27:36.744+02:00  INFO 44587 --- [assecor-assessment-test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.assecor.assessment.controller.PersonControllerTest]: PersonControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-09-29T23:27:36.960+02:00  INFO 44587 --- [assecor-assessment-test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.assecor.assessment.AssessmentApplication for test class com.assecor.assessment.controller.PersonControllerTest
+  <testcase name="testFindAll" classname="com.assecor.assessment.repository.DatabasePersonRepositoryTest" time="2.221">
+    <system-out><![CDATA[2025-09-29T23:27:21.424+02:00  INFO 44587 --- [assecor-assessment-test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.assecor.assessment.repository.DatabasePersonRepositoryTest]: DatabasePersonRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-09-29T23:27:21.526+02:00  INFO 44587 --- [assecor-assessment-test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.assecor.assessment.AssessmentApplication for test class com.assecor.assessment.repository.DatabasePersonRepositoryTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -77,17 +77,298 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.0)
 
-2025-09-29T23:27:37.032+02:00  INFO 44587 --- [assecor-assessment-test] [           main] c.a.a.controller.PersonControllerTest    : Starting PersonControllerTest using Java 17.0.11 with PID 44587 (started by shubhamtunwal in /Users/shubhamtunwal/Documents/Projects/Assecor)
-2025-09-29T23:27:37.033+02:00  INFO 44587 --- [assecor-assessment-test] [           main] c.a.a.controller.PersonControllerTest    : The following 1 profile is active: "test"
-2025-09-29T23:27:40.173+02:00  INFO 44587 --- [assecor-assessment-test] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2025-09-29T23:27:40.174+02:00  INFO 44587 --- [assecor-assessment-test] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2025-09-29T23:27:40.185+02:00  INFO 44587 --- [assecor-assessment-test] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 11 ms
-2025-09-29T23:27:40.227+02:00  INFO 44587 --- [assecor-assessment-test] [           main] c.a.a.controller.PersonControllerTest    : Started PersonControllerTest in 3.251 seconds (process running for 33.088)
+2025-09-29T23:27:21.640+02:00  INFO 44587 --- [assecor-assessment-test] [           main] c.a.a.r.DatabasePersonRepositoryTest     : Starting DatabasePersonRepositoryTest using Java 17.0.11 with PID 44587 (started by shubhamtunwal in /Users/shubhamtunwal/Documents/Projects/Assecor)
+2025-09-29T23:27:21.642+02:00  INFO 44587 --- [assecor-assessment-test] [           main] c.a.a.r.DatabasePersonRepositoryTest     : The following 1 profile is active: "database-test"
+2025-09-29T23:27:22.152+02:00  INFO 44587 --- [assecor-assessment-test] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-29T23:27:22.274+02:00  INFO 44587 --- [assecor-assessment-test] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 1 JPA repository interface.
+2025-09-29T23:27:22.592+02:00  INFO 44587 --- [assecor-assessment-test] [           main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2025-09-29T23:27:22.757+02:00  INFO 44587 --- [assecor-assessment-test] [           main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:663cbaa7-c6c8-42af-b5d3-35da617ad305;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2025-09-29T23:27:25.698+02:00  INFO 44587 --- [assecor-assessment-test] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-29T23:27:25.977+02:00  WARN 44587 --- [assecor-assessment-test] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+Hibernate: 
+    drop table if exists persons cascade 
+Hibernate: 
+    create table persons (
+        id bigint generated by default as identity,
+        city varchar(255),
+        color varchar(255),
+        lastname varchar(255) not null,
+        name varchar(255) not null,
+        zipcode varchar(255),
+        primary key (id)
+    )
+2025-09-29T23:27:28.465+02:00  INFO 44587 --- [assecor-assessment-test] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-29T23:27:29.312+02:00  INFO 44587 --- [assecor-assessment-test] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-29T23:27:33.429+02:00  INFO 44587 --- [assecor-assessment-test] [           main] c.a.a.r.DatabasePersonRepositoryTest     : Started DatabasePersonRepositoryTest in 11.894 seconds (process running for 26.29)
+Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        pe1_0.id,
+        pe1_0.city,
+        pe1_0.color,
+        pe1_0.lastname,
+        pe1_0.name,
+        pe1_0.zipcode 
+    from
+        persons pe1_0
 ]]></system-out>
   </testcase>
-  <testcase name="createPerson_ShouldCreateAndReturnNewPerson" classname="com.assecor.assessment.controller.PersonControllerTest" time="0.238"/>
-  <testcase name="getPersonsByColor_WhenNoPersonsWithColor_ShouldReturnEmptyList" classname="com.assecor.assessment.controller.PersonControllerTest" time="0.165"/>
-  <testcase name="getPersonById_WhenPersonExists_ShouldReturnPerson" classname="com.assecor.assessment.controller.PersonControllerTest" time="0.03"/>
-  <testcase name="getAllPersons_ShouldReturnListOfPersons" classname="com.assecor.assessment.controller.PersonControllerTest" time="0.042"/>
-  <testcase name="getPersonById_WhenPersonDoesNotExist_ShouldReturnNotFound" classname="com.assecor.assessment.controller.PersonControllerTest" time="0.049"/>
+  <testcase name="testSaveNewPerson" classname="com.assecor.assessment.repository.DatabasePersonRepositoryTest" time="0.155">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        pe1_0.id,
+        pe1_0.city,
+        pe1_0.color,
+        pe1_0.lastname,
+        pe1_0.name,
+        pe1_0.zipcode 
+    from
+        persons pe1_0
+]]></system-out>
+  </testcase>
+  <testcase name="testFindById" classname="com.assecor.assessment.repository.DatabasePersonRepositoryTest" time="0.181">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        pe1_0.id,
+        pe1_0.city,
+        pe1_0.color,
+        pe1_0.lastname,
+        pe1_0.name,
+        pe1_0.zipcode 
+    from
+        persons pe1_0
+]]></system-out>
+  </testcase>
+  <testcase name="testFindByIdNotFound" classname="com.assecor.assessment.repository.DatabasePersonRepositoryTest" time="0.092">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        pe1_0.id,
+        pe1_0.city,
+        pe1_0.color,
+        pe1_0.lastname,
+        pe1_0.name,
+        pe1_0.zipcode 
+    from
+        persons pe1_0 
+    where
+        pe1_0.id=?
+]]></system-out>
+  </testcase>
+  <testcase name="testFindByColor" classname="com.assecor.assessment.repository.DatabasePersonRepositoryTest" time="0.221">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        pe1_0.id,
+        pe1_0.city,
+        pe1_0.color,
+        pe1_0.lastname,
+        pe1_0.name,
+        pe1_0.zipcode 
+    from
+        persons pe1_0 
+    where
+        lower(pe1_0.color)=lower(?)
+]]></system-out>
+  </testcase>
+  <testcase name="testUpdateExistingPerson" classname="com.assecor.assessment.repository.DatabasePersonRepositoryTest" time="0.211">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        pe1_0.id,
+        pe1_0.city,
+        pe1_0.color,
+        pe1_0.lastname,
+        pe1_0.name,
+        pe1_0.zipcode 
+    from
+        persons pe1_0
+Hibernate: 
+    update
+        persons 
+    set
+        city=?,
+        color=?,
+        lastname=?,
+        name=?,
+        zipcode=? 
+    where
+        id=?
+Hibernate: 
+    select
+        pe1_0.id,
+        pe1_0.city,
+        pe1_0.color,
+        pe1_0.lastname,
+        pe1_0.name,
+        pe1_0.zipcode 
+    from
+        persons pe1_0
+]]></system-out>
+  </testcase>
+  <testcase name="testFindByColorCaseInsensitive" classname="com.assecor.assessment.repository.DatabasePersonRepositoryTest" time="0.027">
+    <system-out><![CDATA[Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        persons
+        (city, color, lastname, name, zipcode, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        pe1_0.id,
+        pe1_0.city,
+        pe1_0.color,
+        pe1_0.lastname,
+        pe1_0.name,
+        pe1_0.zipcode 
+    from
+        persons pe1_0 
+    where
+        lower(pe1_0.color)=lower(?)
+]]></system-out>
+  </testcase>
 </testsuite>

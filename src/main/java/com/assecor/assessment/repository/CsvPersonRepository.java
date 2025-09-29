@@ -2,6 +2,7 @@ package com.assecor.assessment.repository;
 
 import com.assecor.assessment.model.Person;
 import com.opencsv.CSVReader;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Repository;
 
@@ -13,6 +14,7 @@ import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Repository
+@ConditionalOnProperty(name = "app.datasource.type", havingValue = "csv", matchIfMissing = true)
 public class CsvPersonRepository implements PersonRepository {
 
     private final List<Person> persons;

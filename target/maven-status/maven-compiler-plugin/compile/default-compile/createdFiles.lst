@@ -1,6 +1,6 @@
 com/assecor/assessment/repository/PersonRepository.class
 com/assecor/assessment/controller/PersonController.class
-com/assecor/assessment/AssessmentApplication.class
 com/assecor/assessment/model/Person.class
 com/assecor/assessment/service/PersonService.class
+com/assecor/assessment/AssessmentApplication.class
 com/assecor/assessment/repository/CsvPersonRepository.class
